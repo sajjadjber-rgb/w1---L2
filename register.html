@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل بفعالية | Full-Stack Bootcamp</title>
+    <link rel="stylesheet" href="./decoration.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>صفحة تسجيل بفعاليات البوتكامب</h1>
+      <p>قم بتعبئة البيانات التالية للانضمام إلى الورشة البرمجية</p>
+    </header>
+
+    <main class="container">
+      <form action="#" method="POST" class="registration-form">
+        <h2>نموذج التسجيل</h2>
+
+        <div class="form-group">
+          <label for="fullName">الاسم الكامل:</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="أدخل اسمك الثلاثي"
+            required
+            minlength="3"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@domain.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">رقم الهاتف:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="07XXXXXXXX"
+            required
+            minlength="10"
+            maxlength="12
+            "
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="eventDate">تاريخ الفعالية:</label>
+          <input type="date" id="eventDate" name="eventDate" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">كلمة المرور للحساب:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="أدخل كلمة المرور"
+            required
+            minlength="6"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="workshop">اختيار الورشة:</label>
+          <select id="workshop" name="workshop" required>
+            <option value="" disabled selected>اختر الورشة المناسبة...</option>
+            <option value="frontend">تطوير واجهات المستخدم (Frontend)</option>
+            <option value="backend">تطوير الخلفيات والأنظمة (Backend)</option>
+            <option value="fullstack">تطوير الويب الشامل (Full-Stack)</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group fieldset-group">
+          <legend>المستوى الحالي:</legend>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="level" value="beginner" required />
+              مبتدئ
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="level" value="intermediate" />
+              متوسط
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="level" value="advanced" />
+              متقدم
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-submit">تسجيل في الفعالية</button>
+      </form>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2026 جميع الحقوق محفوظة - بوتكامب تطوير الويب الشامل</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+/* ===================================================
+   إعادة ضبط الأساسيات وتطبيق Box Model الشامل
+   =================================================== */
+* {
+  box-sizing: border-box; /* يضمن تضمين Padding و Border ضمن العرض والارتفاع */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===================================================
+   الهيدر والفوتر
+   =================================================== */
+.main-header {
+  background-color: #1a252f;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.main-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-header p {
+  color: #bdc3c7;
+  font-size: 0.95rem;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #1a252f;
+  color: #ecf0f1;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* ===================================================
+   تنسيق الحاوية والنموذج (Box Model)
+   =================================================== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  flex: 1;
+}
+
+.registration-form {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 2.5rem; /* Internal Padding */
+  border-radius: 12px; /* Border Radius */
+  border: 1px solid #e0e0e0; /* Border */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Box Shadow */
+}
+
+.registration-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* ===================================================
+   تنسيق عناصر الإدخال والـ Margin
+   =================================================== */
+.form-group {
+  margin-bottom: 1.25rem; /* Margin بين الحقول */
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.fieldset-group {
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.fieldset-group legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+/* ===================================================
+   تنسيق الحقول مع Box Model
+   =================================================== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 0.75rem 0.9rem; /* Padding داخلي */
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #fafafa;
+  transition: all 0.25s ease-in-out;
+}
+
+/* ===================================================
+   حالة التركيز :focus (متطلب التحدي)
+   =================================================== */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); /* تأثير التركيز البصري */
+}
+
+/* ===================================================
+   تنسيق خيارات Radio
+   =================================================== */
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #3498db;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"]:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* ===================================================
+   زر الإرسال
+   =================================================== */
+.btn-submit {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
+  margin-top: 0.8rem;
+}
+
+.btn-submit:hover {
+  background-color: #2980b9;
+}
+
+.btn-submit:active {
+  transform: scale(0.99);
+}
+
+.btn-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
